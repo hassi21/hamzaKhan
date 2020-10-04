@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ToggleEditContactButton from './ToggleEditContactButton';
+import Button from '@material-ui/core/Button';
 
 class ContactList extends Component {
 
@@ -32,11 +33,12 @@ class ContactList extends Component {
                                 { contact.phone }, { contact.email }<br/>
                                 { contactDisplay }<br/>
 
-                                <button
+                                <Button
+                                    variant="outlined" color="secondary"
                                     onClick={ this.handleRemoveClick }
                                     data-contact-id={ contact.id }>
                                     remove
-                                </button>
+                                </Button>
 
                                 <ToggleEditContactButton
                                     contact={ contact }

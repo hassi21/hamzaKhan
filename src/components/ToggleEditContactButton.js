@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EditContactForm from './EditContactForm';
+import Button from '@material-ui/core/Button';
 
 class ToggleEditContactButton extends Component {
 
@@ -14,13 +15,14 @@ class ToggleEditContactButton extends Component {
         return (
 
             <React.Fragment>
-                <button
+                <Button
+                    variant="contained" color="primary"
                     onClick={() =>
                         this.setState({ showEditForm: !this.state.showEditForm })
                     }
                 >
                 edit
-                </button>
+                </Button>
 
                 { this.state.showEditForm && (
                     <EditContactForm
